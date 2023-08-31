@@ -1,0 +1,1202 @@
+:root {
+    --main-color: #55527C;
+    --dark-color: #130F49;
+    --yellow-color: #FF972D;
+    --blue-color: #A5A6FF;
+    --fresh-color: #effbf8;
+    --font-inter: 'Inter', sans-serif;
+    --font-karla: 'Karla', sans-serif;
+    --font-kristi: 'Kristi', cursive;
+}
+
+html {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    font-family: var(--font-karla);
+    line-height: 20px;
+    letter-spacing: 0;
+    word-wrap: break-word;
+    font-weight: 400;
+    background-color: #fff;
+    color: var(--main-color);
+    overflow: hidden;
+    right: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    /* min-height: calc(100vh - 30px); */
+    min-height: 100vh;
+}
+
+
+/* -------------------------------- */
+/*   Mobile Responsive Navbar Css   */
+/* -------------------------------- */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #fff;
+    z-index: 15;
+    display: none;
+}
+
+.topbar_inner {
+    width: 100%;
+    height: 100%;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.topbar_inner .logo img {
+    max-width: 100px;
+    max-height: 40px
+}
+
+.topbar .hamburger {
+    padding: 0
+}
+
+.topbar .hamburger-inner,
+.topbar .hamburger-inner:after,
+.topbar .hamburger-inner:before {
+    width: 30px;
+    height: 2px;
+}
+
+.topbar .trigger {
+    position: relative;
+    top: 5px
+}
+
+.topbar .hamburger-box {
+    width: 30px
+}
+
+
+.mobile_menu {
+    position: fixed;
+    top: 50px;
+    right: -200px;
+    height: 100vh;
+    width: 200px;
+    z-index: 15;
+    background-color: #fff;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* .mobile_menu.opened {
+    right: 0;
+} */
+
+.mobile_menu .inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 30px 5px 5px;
+    right: 12px;
+}
+
+.mobile_menu .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.mobile_menu .menu_list {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.mobile_menu .menu_list ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile_menu .menu_list ul li {
+    margin: 0 0 7px;
+}
+
+.mobile_menu .menu_list ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.active{
+    color: #FF972D;
+}
+
+
+
+/* ----------------------- */
+/*  Sidebarr CSS Styles    */
+/* ----------------------- */
+.sidebar {
+    width: 300px;
+    background-color: #76c3fa35;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.avatar img {
+    width: 70px;
+    border-radius: 100%;
+    border: 2px solid #130F49;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    /* text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.083), 0 0 1em rgba(0, 0, 255, 0.182), 0 0 0.1em #0b0b5d41; */
+}
+
+.name span {
+    font-size: 18px;
+}
+
+.social ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.social ul li {
+    background-color: aliceblue;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p {
+    font-size: small;
+    text-align: center;
+}
+
+
+/* --------------------------- */
+/* Right Side Content CSS*/
+/* --------------------------- */
+.content-rightSide {
+    flex: 1;
+    box-sizing: border-box;
+    /* background: linear-gradient(-45deg, #014dfeb0, #f8380881, #03f2eab2, #f40bd574);
+    background-size: 300% 300%;
+    animation: gradientAnimation 4s ease infinite; */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: none;
+}
+
+/* @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ecf7f7;
+    opacity: 30%;
+    z-index: -1;
+}
+
+.fixed-buttons {
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.fixed-buttons-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.tooltip-button {
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 110px;
+    background-color: #000;
+    color: #fff;
+    font-size: xx-small;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.tooltip-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fixed-buttons-second {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    height: 400px;
+}
+
+.fixed-buttons .single-button, .fixed-buttons button{
+    display: inline-block;
+    padding: 10px 32px;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(27, 26, 26, 0.275);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    
+}
+
+.fixed-buttons .single-button:hover, .fixed-buttons button:hover {
+    color: #130F49;
+    background-color: #0000002a;
+    border: 1px solid #130f496f;
+    transform: translateY(-4px);
+    transition: .3;
+    font-size: medium;
+    font-weight: 700;
+    translate: .3s;
+}
+
+.fixed-buttons .single-button i, .fixed-buttons button i{
+    font-size: 30px;
+}
+
+.fixed-buttons .single-button span, .fixed-buttons button span {
+    transition: .5;
+    padding: 5px;
+    transition: .3s;
+}
+
+
+.main-content-scrollable {
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+    width: 100%;
+}
+
+
+/* --------------------------------- */
+/*          Second Page              */
+/* --------------------------------- */
+
+
+/* Content data - Second Page */
+/* --------------------------------- */
+#second-page {
+    display: none;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+/* ------------- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #130f49;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 78.5%;
+    /* width: 100%;  */
+    margin-left: 300px;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 24px;
+
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    color: #FF972D;
+}
+
+.language-dropdown {
+    position: relative;
+    z-index: 2;
+}
+
+.current-language img {
+    width: 20%;
+    height: auto;
+    cursor: pointer;
+}
+
+.language-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.language-options li {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-options li:hover {
+    background-color: #ecf7f7;
+}
+
+.language-dropdown:hover .language-options {
+    display: block;
+}
+
+/* ------------------------------- */
+/*    all contents - Second Page   */
+/* ------------------------------- */
+.second-contents {
+    padding-inline: 20px;
+}
+
+/* About (Home) Styles */
+/* ------------------- */
+.Sadykova_tm_about {
+    width: 100%;
+    /* min-height: 100vh; */
+    clear: both;
+    float: left;
+    /* background-color: #effbf8 */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.Sadykova_tm_about .details {
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+}
+
+.Sadykova_tm_about .details .left {
+    width: 50%
+}
+
+.Sadykova_tm_about .title {
+    width: 100%;
+    float: left;
+    margin-bottom: 21px
+}
+
+.Sadykova_tm_about .title h3 {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 70px
+}
+
+.Sadykova_tm_about .title span {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 72px
+}
+
+.Sadykova_tm_about .subtitle {
+    width: 100%;
+    max-width: 80%;
+    float: left;
+    margin-bottom: 40px
+}
+
+.right {
+    border-radius: 50%;
+}
+
+.Sadykova_tm_button {
+    width: 100%;
+    float: left
+}
+
+.Sadykova_tm_button a {
+    color: #fff;
+    background-color: #130f49;
+    display: inline-block;
+    border: 1.5px solid #130f49;
+    border-radius: 4px;
+    padding: 9px 40px;
+    white-space: nowrap;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.Sadykova_tm_button a:hover {
+    background-color: transparent;
+    color: #55527c
+}
+
+.Sadykova_tm_button[data-style=border] a {
+    background-color: transparent;
+    color: #55527c
+}
+
+.Sadykova_tm_button[data-style=border] a:hover {
+    background-color: #130f49;
+    color: #fff
+}
+
+.Sadykova_tm_button[data-position=center] {
+    text-align: center
+}
+
+.Sadykova_tm_button[data-position=left] {
+    text-align: left
+}
+
+.Sadykova_tm_button[data-position=right] {
+    text-align: right
+}
+
+.Sadykova_tm_about .buttons {
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.Sadykova_tm_about .Sadykova_tm_button {
+    width: auto;
+}
+
+.Sadykova_tm_about .Sadykova_tm_button:nth-child(2) {
+    margin-left: 15px;
+}
+
+.Sadykova_tm_about .info {
+    width: 100%;
+    float: left;
+}
+
+.Sadykova_tm_about .info ul {
+    margin: 0;
+    position: relative;
+}
+
+.Sadykova_tm_about .info ul:before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    background-color: var(--yellow-color);
+    top: 0;
+    bottom: 0;
+}
+
+.Sadykova_tm_about .info ul li {
+    padding-left: 15px;
+}
+
+.Sadykova_tm_about .info ul li a {
+    color: #130f49;
+    font-weight: 600;
+    font-size: 18px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.Sadykova_tm_about .info ul li a:hover {
+    color: var(--yellow-color)
+}
+
+.Sadykova_tm_about .info ul li p {
+    color: #130f49;
+    font-weight: 600;
+    font-size: 18px
+}
+
+.Sadykova_tm_about .details .right {
+    width: 50%;
+    padding-left: 50px;
+}
+
+
+
+/* Single-section Styles */
+/* --------------------- */
+.single-section h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.single-section h2 {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.single-section p {
+    margin: 10px 0;
+    text-align: left;
+
+}
+
+.single-section .Sadykova_tm_title {
+    margin-block: 50px;
+}
+
+.single-section .Sadykova_tm_title span {
+    width: 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: medium;
+}
+
+.single-section .Sadykova_tm_title h3 {
+    font-size: 40px;
+    color: #130F49;
+    font-weight: 700;
+}
+
+.duration {
+    float: right;
+}
+
+.single-section strong {
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    border-top: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    border-left: 3px solid #3498db;
+    border-radius: 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-block: 20px;
+}
+
+.card-header {
+    background-color: white;
+    color: #030303;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 12px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-body {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+.duration {
+    font-size: 18px;
+    color: #555;
+}
+
+
+/* Testimonial Styles */
+/* ------------------ */
+.single-section {
+    font-family: Arial, sans-serif;
+}
+
+.single-section h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #55527c;
+    margin-top: 60px;
+}
+
+.single-section .Sadykova_tm_testimonial_wrapper {
+    margin: 50px 0;
+}
+
+.single-section .testimonials_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.single-section .testimonials_list li {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: calc(50% - 20px);
+}
+
+.single-section .testimonials_list .text p {
+    margin: 0;
+}
+
+.single-section .testimonials_list .short {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.single-section .testimonials_list .short .image .main {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.single-section .testimonials_list .short .detail h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.single-section .testimonials_list .job {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #777;
+}
+
+
+/* Contact Styles */
+/* -------------- */
+.Sadykova_tm_contact {
+    width: 100%;
+    min-height: 100vh;
+    float: left;
+    background-color: #e9f9ff;
+    padding-top: 120px;
+}
+
+.Sadykova_tm_contact .wrapper {
+    width: 100%;
+    float: left;
+    display: flex;
+
+}
+
+.Sadykova_tm_contact .wrapper .left {
+    width: 50%;
+    padding-right: 50px;
+    margin-left: 50px;
+
+}
+
+.Sadykova_tm_contact .wrapper .text {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 40px
+}
+
+.Sadykova_tm_contact .wrapper .info {
+    width: 100%;
+    float: left
+}
+
+.Sadykova_tm_contact .wrapper .info ul {
+    margin: 0
+}
+
+.Sadykova_tm_contact .wrapper .info ul li {
+    margin: 0 0 8px;
+    width: 100%;
+    float: left
+}
+
+.Sadykova_tm_contact .wrapper .info ul li:last-child {
+    margin-bottom: 0
+}
+
+.Sadykova_tm_contact .wrapper .info ul li a {
+    color: var(--dark-color);
+    font-weight: 600;
+    font-family: var(--font-inter);
+    display: inline-block;
+    position: relative;
+}
+
+.Sadykova_tm_contact .wrapper .info ul li a:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    left: 0;
+    bottom: 2px;
+    background-color: var(--dark-color);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.Sadykova_tm_contact .wrapper .info ul li a:hover:before {
+    width: 0
+}
+
+.Sadykova_tm_contact .wrapper .right {
+    width: 50%;
+    padding-left: 50px;
+    margin-right: 50px;
+}
+
+.Sadykova_tm_contact .fields {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left
+}
+
+.Sadykova_tm_contact .fields .first {
+    width: 100%;
+    float: left
+}
+
+.Sadykova_tm_contact .fields ul {
+    margin: 0;
+    list-style-type: none
+}
+
+.Sadykova_tm_contact .fields ul li {
+    width: 100%;
+    margin: 0 0 25px;
+    float: left
+}
+
+.Sadykova_tm_contact .fields ul li input {
+    width: 100%;
+    height: 60px;
+    background-color: #fff
+}
+
+.Sadykova_tm_contact .fields ul li input:focus {
+    outline: none
+}
+
+.Sadykova_tm_contact .fields .last textarea {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    margin-bottom: 15px;
+    background-color: #fff
+}
+
+.Sadykova_tm_contact .fields .last textarea:focus {
+    outline: none
+}
+
+.Sadykova_tm_contact .empty_notice {
+    color: #f52225;
+    margin-bottom: 7px;
+    display: none;
+    text-align: left;
+    font-weight: 500
+}
+
+.Sadykova_tm_contact .contact_error {
+    color: #f52225;
+    text-align: left;
+    font-weight: 500
+}
+
+.Sadykova_tm_contact .returnmessage {
+    color: #3a00ff;
+    margin-bottom: 7px;
+    text-align: left;
+    font-weight: 500
+}
+
+.Sadykova_tm_map {
+    width: 100%;
+    float: left;
+    margin-inline: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* --------------------- */
+
+
+/* Footer Css */
+footer {
+    background-color: #130f49;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* --------------------------- */
+/*       Mobile screens        */
+/* --------------------------- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .topbar {
+        display: block;
+        right: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .fixed-buttons {
+        align-items: center;
+        padding: 5px;
+    }
+
+    .fixed-buttons-second {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: 400px;
+        width: 100%;
+    }
+
+    .fixed-buttons .single-button {
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 10px;
+        max-width: 400px;
+        min-width: 70px;
+    }
+
+    .fixed-buttons-second span {
+        padding-bottom: 5px;
+        margin: auto;
+    }
+
+    .content-rightSide {
+        padding-block: 0px;
+    }
+
+    .main-content-scrollable {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        max-height: calc(100vh - 20px);
+        padding: 10px 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    /*-----------About (Home) Styles--------------*/
+    .Sadykova_tm_about .title {
+        width: 100%;
+        float: left;
+        margin-bottom: 21px
+    }
+
+    .Sadykova_tm_about .title h3 {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .Sadykova_tm_about .title span {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .Sadykova_tm_about .details {
+        align-items: baseline;
+        flex-direction: column-reverse;
+    }
+
+    .Sadykova_tm_about .details .left {
+        width: 100%;
+    }
+
+    .Sadykova_tm_about .details .right {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .Sadykova_tm_about {
+        padding: 50px 0;
+    }
+
+    .Sadykova_tm_about .title h3,.Sadykova_tm_about .title span {
+        font-size: 50px;
+        line-height: 63px;
+    }
+
+    .Sadykova_tm_about .buttons {
+        margin-bottom: 75px;
+    }
+
+    .duration {
+        float: right;
+        font-size: 6px;
+        font: bold;
+    }
+
+    .content-rightSide {
+        padding: 5px;
+    }
+
+
+    /* ----------Single-section styles--------- */
+    .single-section h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #55527c;
+        margin-top: 40px;
+    }
+
+    /* ---------testimonial Styles---------*/
+    .single-section .Sadykova_tm_testimonial_wrapper {
+        margin: 10px 0;
+    }
+
+    .single-section .Sadykova_tm_title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .single-section .Sadykova_tm_title span {
+        display: block;
+        font-size: 30px;
+        color: #55527c;
+        font-weight: 700;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    .single-section .Sadykova_tm_title h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .single-section .testimonials_list ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .single-section .testimonials_list li {
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .single-section .testimonials_list .text p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .single-section .testimonials_list .short {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .single-section .testimonials_list .short .image .main {
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .single-section .testimonials_list .short .detail h3 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .single-section .testimonials_list .job {
+        font-size: 12px;
+        margin-top: 8px;
+        color: #777;
+    }
+
+    /* -------Contact Styles-------*/
+    .Sadykova_tm_contact {
+        padding-top: 60px;
+
+    }
+
+    .Sadykova_tm_contact .wrapper {
+        flex-direction: column;
+
+    }
+
+    .Sadykova_tm_contact .wrapper .left,
+    .Sadykova_tm_contact .wrapper .right {
+        width: 90%;
+        padding: 0;
+        margin: 10px;
+    }
+
+    .Sadykova_tm_contact .info ul li {
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .Sadykova_tm_contact .fields ul li {
+        margin: 0;
+    }
+
+    .Sadykova_tm_contact .fields ul li input,
+    .Sadykova_tm_contact .fields .last textarea {
+        height: 50px;
+    }
+
+    .Sadykova_tm_map {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+}
